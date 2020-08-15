@@ -46,6 +46,28 @@ INSERT INTO uploadStartUpform
 (instaLink, twitterLink, fbLink, websiteLink, fundRaise, investmentStage, investmentFirm,lastInvestmentDate,lastInvestmentBy,lastInvestment,acceleratorLink,accelerator,program,empStrength,startupDate,currentStage,qualification,experience,contactNumber,contactEmail,gender,age,linkedInLink,founder,sector,tagline,descriptionOfSolution,startupName) VALUES
 ('$insta_link', '$twitter_link', '$fb_link', '$website_link', '$fund_raise', '$investment_stage', '$investment_firm', '$last_investment_date', '$last_investment_date', '$last_investment_date', '$last_investment_by', '$last_investment', '$accelerator_link', '$accelerator', '$last_investment_date', '$program', '$emp_strength', '$startup_date', '$current_stage', '$qualification', '$experience', '$contact_number', '$contact_email', '$gender', '$age', '$linked_in_link', '$founder', '$sector', '$_tagline', '$description_of_solution', '$startup_name');";
 
+$inv_first_name=$_POST['inv_first_name'];
+$inv_last_name=$_POST['inv_last_name'];
+$inv_company_name=$_POST['inv_company_name'];
+$inv_job_title=$_POST['inv_job_title'];
+$inv_investor_type=$_POST['inv_investor_type'];
+$inv_mobile_number=$_POST['inv_mobile_number'];
+$inv_email_id=$_POST['inv_email_id'];
+$inv_website=$_POST['inv_website'];
+$inv_city=$_POST['inv_city'];
+$inv_pincode=$_POST['inv_pincode'];
+$inv_linkedin=$_POST['inv_linkedin'];
+$inv_funding_stage=$_POST['inv_funding_stage'];
+$inv_founded_year=$_POST['inv_founded_year'];
+$inv_country=$_POST['inv_country'];
+$inv_product_stage=$_POST['inv_product_stage'];
+$inv_sector=$_POST['inv_sector'];
+
+$query = "
+INSERT INTO uploadStartUpform
+(invFirstName, invLastName, invCompanyName, invJobTitle, invInvestorType, invMobileNumber, invEmailId, invWebsite, invCity, invPincode, invLinkedin, invFundingStage, invFoundedYear, invCountry, invProductStage, invSector) VALUES
+('$inv_first_name', '$inv_last_name', '$inv_company_name', '$inv_job_title', '$inv_investor_type', '$inv_mobile_number', '$inv_email_id', '$inv_website', '$inv_city', '$inv_pincode', '$inv_linkedin', '$inv_funding_stage', '$inv_founded_year', '$inv_country', '$inv_product_stage', '$inv_sector');";
+
 
 
 mysqli_query($myConnection,$query) or die('Error, query failed');
